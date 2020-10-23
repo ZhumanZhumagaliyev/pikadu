@@ -1,0 +1,573 @@
+@font-face {
+    font-family: "SFProDisplay-Regular";
+    src: local("SFProDisplay-Regular");
+    src: url("/fonts/SFProDisplay-Regular.woff2") format("woff2"),
+        url("/fonts/SFProDisplay-Regular.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SFProDisplay-Semibold";
+    src: local("SFProDisplay-Semibold");
+    src: url("/fonts/SFProDisplay-Semibold.woff2") format("woff2"),
+        url("/fonts/SFProDisplay-Semibold.woff") format("woff");
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SFProDisplay-Regular", sans-serif;
+    background-color: #e5e5e5;
+}
+
+.header {
+    background-color: #FA8C16;
+    padding: 16px 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.header-wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    margin-left: 60px;
+    margin-right: auto;
+}
+
+.header-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-menu-link {
+    text-decoration: none;
+    color: #fafafa;
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.input-group {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+    max-width: 237px;
+    width: 60%;
+    height: 32px;
+    background-color: #fff;
+}
+
+.search-input {
+    height: 100%;
+    width: 80%;
+    border: none;
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 12px;
+}
+
+.search-button {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #fff;
+}
+
+.icon-search {
+    fill: #FA8C16;
+}
+
+.search-toggle {
+    display: none;
+    fill: #fff;
+}
+
+
+.search-input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #BFBFBF;
+    /* Firefox */
+    opacity: 1;
+}
+
+.search-input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #BFBFBF;
+}
+
+.search-input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #BFBFBF;
+}
+
+/* Посты */
+
+.content {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.posts {
+    width: 67%;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 30px;
+}
+
+.post-body {
+    padding: 35px 35px 0 35px;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 19px;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.post-text {
+    color: #262626;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.tags {
+    margin-bottom: 22px;
+}
+
+.tag {
+    color: #BFBFBF;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #E8E8E8;
+    background: #FAFAFA;
+    padding: 13px 35px;
+}
+
+.post-buttons {
+    display: flex;
+}
+
+.post-button .icon {
+    fill: #8c8c8c;
+}
+
+.icon-like,
+.icon-comment {
+    margin-right: 6px;
+}
+
+.post-button {
+    background-color: transparent;
+    border: none;
+    color: #8c8c8c;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 19px;
+    cursor: pointer;
+}
+
+.post-author {
+    display: flex;
+    text-align: right;
+}
+
+.author-username {
+    display: block;
+    color: #8C8C8C;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.author-avatar {
+    width: 34px;
+    height: 34px;
+    margin-left: 9px;
+    border-radius: 4px;
+}
+
+.post-time {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #BFBFBF;
+}
+
+.sidebar {
+    width: 31%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.user {
+    background-color: #fafafa;
+    border: 1px solid #e8e8e8;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    margin-right: 17px;
+}
+
+.user-name {
+    color: #595959;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.icon-exit {
+    width: 20px;
+    height: 20px;
+    fill: #000;
+}
+
+.sidebar-nav {
+    background-color: #fff;
+
+}
+
+.sidebar-menu {
+    margin: 0;
+    border: 1px solid #e8e8e8;
+    border-top: none;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu-link {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+    padding: 16px 48px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-menu-link:active {
+    background-color: #FFFBE6;
+    border-right: 3px solid #FAAD14;
+}
+
+.sidebar-menu-link:hover {
+    background-color: #FFFBE6;
+}
+
+.button {
+    background: #FAAD14;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.button-new-post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.icon-fire {
+    width: 11px;
+    height: 13px;
+    fill: white;
+    margin-right: 10px;
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    margin-top: 20px;
+}
+
+.card-header {
+    background: #FAFAFA;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 23px 25px;
+}
+
+.card-title {
+    margin: 0;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.card-body {
+    padding: 22px 40px 20px 25px;
+}
+
+.card-body-title {
+    margin: 0;
+    text-decoration: none;
+    color: #D48806;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #262626;
+    margin: 10px 0;
+}
+
+.promo {
+    display: block;
+    background: #fff url(../img/promo.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 260px;
+    border: 1px solid #e8e8e8;
+    margin-top: 20px;
+    position: relative;
+}
+
+.promo::before {
+    content: "Реклама";
+    position: absolute;
+    right: 0;
+    top: -0.1px;
+    background: #c4c4c4;
+    padding: 0 24px;
+    font-size: 12px;
+    line-height: 20px;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Посты */
+
+.add-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-title,
+.add-text {
+    background-color: #fff;
+    border: 1px solid #E8E8E8;
+    padding: 23px 30px;
+    margin-bottom: 16px;
+
+}
+
+.add-text {
+    min-height: 362px;
+}
+
+
+.button-outline {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFC53D;
+    border: 1px solid #FFC53D;
+    background-color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+}
+
+.button-outline .icon {
+    width: 14px;
+    height: 11px;
+    fill: #FFC53D;
+}
+
+.add-button {
+    width: 100%;
+    max-width: 370px;
+    margin-right: 2%;
+}
+
+.add-post .button-outline {
+    margin-right: 1%;
+}
+
+
+@media (max-width: 990px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        margin-left: 12px;
+    }
+
+    .menu-toggle span {
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 998;
+    }
+
+    .content {
+        margin-top: 94px;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 64px;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        max-width: 320px;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+        transform: translateX(100%);
+        transition: transform .2s;
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+
+    }
+
+    .posts {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-footer {
+        flex-direction: column;
+
+    }
+
+    .post-author {
+        margin-top: 15px;
+
+    }
+
+    .author-about {
+        order: 2;
+        text-align: left;
+    }
+
+    .author-avatar {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+
+    /* Скрываю поле поиска */
+
+    .header-nav {
+        margin-left: 20px;
+    }
+
+    .input-group {
+        display: none;
+        position: fixed;
+        top: 56px;
+        right: 50%;
+        width: 236px;
+        margin-right: -118px;
+    }
+
+    .input-group.visible {
+        display: block;
+    }
+
+    .search-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 649px) {
+    .add-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .add-post .button-outline {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 446px) {
+    .header-menu {
+        display: none;
+    }
+}
