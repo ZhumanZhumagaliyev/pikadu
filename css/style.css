@@ -1,16 +1,16 @@
 @font-face {
     font-family: "SFProDisplay-Regular";
     src: local("SFProDisplay-Regular");
-    src: url("/fonts/SFProDisplay-Regular.woff2") format("woff2"),
-        url("/fonts/SFProDisplay-Regular.woff") format("woff");
+    src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"),
+        url("../fonts/SFProDisplay-Regular.woff") format("woff");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "SFProDisplay-Semibold";
     src: local("SFProDisplay-Semibold");
-    src: url("/fonts/SFProDisplay-Semibold.woff2") format("woff2"),
-        url("/fonts/SFProDisplay-Semibold.woff") format("woff");
+    src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2"),
+        url("../fonts/SFProDisplay-Semibold.woff") format("woff");
     font-weight: bold;
 }
 
